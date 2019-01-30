@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+     *{margin:0;padding:0;}
+     /* css3方法居中 */
+     .box{
+     	position: absolute;
+     	top:50%;
+     	left:50%;
+     	width:18em;
+     	height:6em;
+     	transform:translate(-50%,-50%);
+     	background:red;
+     }
+     /*万能居中*/
+      .box2{
+     	position: absolute;
+     	top:0;
+     	left:0;
+     	right:0;
+     	bottom:0;
+     	width:6em;
+     	height:18em;
+     	margin:auto;
+     	background:yellow;
+     }
+       /*             
+        viewport相关的长度单位居中vw和vh
+        vw:1% of viewport's width
+        vh:1% of viewport's height
+        vmin :1% of viewport's smaller dimension
+        vmax :1% of viewport's larger dimension
+       */
+       /*下面是适用于外边距是vh单位的居中*/
+      .box3{
+     	width:18em;
+     	padding:1em 1.5em;
+     	margin:50vh auto 0;
+     	transform:translateY(-50%);
+     	background:green;
+     }
+     /*方法4，在css垂直居中之flexbox中*/
+	</style>
+</head>
+<body>
+	<div class="box">css3居中</div>
+	<div class="box2">万能居中</div>
+	<div class="box3">viewport居中</div>
+</body>
+</html>
